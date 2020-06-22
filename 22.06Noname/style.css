@@ -1,8 +1,8 @@
-p {
+.paragraph {
     color: green
 }
 
-li{
+.listItem{
     color: orange
 }
 
