@@ -7,7 +7,7 @@ img[src$=".jpg"]{
 }
 
 li[data-description~="even"]{
-    background-color: grey;
+    background-color: gray;
 }
 
 li[data-description*="even"]{
