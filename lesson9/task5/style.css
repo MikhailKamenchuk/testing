@@ -1,6 +1,6 @@
-*{
+/* *{
     box-sizing: border-box;
-}
+} */
 .header{
     background-color: darkturquoise;
     width: 100%;
@@ -16,9 +16,8 @@
     position: absolute;
 }
 
-.nvigation ul,li{
+.nvigation ul{
     margin: 0;
-    padding: 0;
 }
 
 .nvigation li{
