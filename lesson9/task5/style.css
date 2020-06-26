@@ -16,8 +16,9 @@
     position: absolute;
 }
 
-.nvigation ul{
+.nvigation ul,li{
     margin: 0;
+    padding: 0;
 }
 
 .nvigation li{
