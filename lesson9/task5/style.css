@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .header{
     background-color: darkturquoise;
     width: 100%;
@@ -11,7 +14,10 @@
 .nvigation{
     height: 40px;
     position: absolute;
-    line-height: 8px;
+}
+
+.nvigation ul{
+    margin: 0;
 }
 
 .nvigation li{
@@ -19,6 +25,8 @@
     margin-left: 16px;
     color: white;
     list-style-type: none;
+    line-height: 40px;
+
 }
 
 .content{
