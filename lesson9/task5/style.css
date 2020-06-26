@@ -37,8 +37,8 @@
     width: 200px;
     height: 200px;
     position: relative;
-    top: calc(50% - 100px);
-    left: calc(50% - 100px);
+    top: calc(100vh - 100px);
+    left: calc(100vh + 200px);
     background-color: aquamarine;
 }
 .ear{
