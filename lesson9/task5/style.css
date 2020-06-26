@@ -21,7 +21,7 @@
 }
 
 .nvigation li{
-    display: inline-block;
+    float: left;
     margin-left: 16px;
     color: white;
     list-style-type: none;
