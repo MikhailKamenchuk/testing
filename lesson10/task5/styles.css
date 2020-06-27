@@ -24,3 +24,7 @@ header {
     background-color: bisque;
     width: 300px;
 }
+
+.article p{
+    margin-bottom: 0;
+}
