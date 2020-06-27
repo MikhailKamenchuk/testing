@@ -1,13 +1,13 @@
+*{
+    box-sizing: border-box;
+}
 body{
     display: flex;
     flex-direction: column;
 }
 header {
     display: flex;
-}
-
-header h1{
-    margin: auto;
+    justify-content: center;
 }
 
 .articles-list{
