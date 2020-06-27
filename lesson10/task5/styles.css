@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+}
+
+header h1{
+    margin: auto;
+}
+
+.articles-list{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.article{
+    margin: 8px;
+    padding: 16px;
+    flex-grow: 1;
+    background-color: bisque;
+    width: 300px;
+}
