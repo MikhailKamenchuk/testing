@@ -1,9 +1,14 @@
 *{
     box-sizing: border-box;
 }
-header {
+/* header {
     display: flex;
     justify-content: center;
+} */
+
+header h1{
+        text-align: center;
+    
 }
 
 .articles-list{
@@ -17,9 +22,5 @@ header {
     flex-grow: 1;
     background-color: bisque;
     width: 300px;
-}
-
-.article p{
-    margin-bottom: 0.3em;
 }
 
