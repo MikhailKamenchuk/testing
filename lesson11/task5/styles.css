@@ -1,0 +1,12 @@
+body{
+    /* visibility: hidden; */
+}
+.gallery{
+    display: flex;
+    overflow-x: scroll;
+    cursor: all-scroll
+}
+.thumb{
+    margin: 8px;
+
+}
