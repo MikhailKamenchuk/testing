@@ -3,6 +3,7 @@ const sum = (from, to) => {
     for(let i = from; i <= to; i++){
         result += i;
     }
+    return result;
 }
 
-const compareSums = (a, b, c, d) => sum(a, b) > sum(c,d)
+const compareSums = (a, b, c, d) => sum(a, b) > sum(c, d)
