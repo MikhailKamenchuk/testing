@@ -3,7 +3,7 @@ const getSum = (arr) => {
     if(!Array.isArray(arr)){
         return null;
     }
-    for(num of arr){
+    for(let num of arr){
         sum += num
     }
     return sum
