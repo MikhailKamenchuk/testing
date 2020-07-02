@@ -1,0 +1,6 @@
+consistent-return
+no-unused-vars
+one-var
+no-var
+eqeqeq
+no-undef
