@@ -1,8 +1,7 @@
-let sum = 0
-for (let i = 1; i <= 1000; i++) {
-    sum += i;
+const findDivCount = (a, b, n) => {
+    let count = 0;
+    for(let i = a; i <= b; i++){
+        if (i % n === 0) count++
+    }
+    return count
 }
-let integer = Math.floor(sum / 1234);
-let rest = sum % 1234;
-
-console.log(integer > rest);
