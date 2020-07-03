@@ -1,3 +1,3 @@
-const getSpecialNumbers = (arr) => {
-    return arr.filter(item => item % 3 === 0)
+const sortDesc = (arr) => {
+    return arr.sort((a, b) => b - a)
 }
