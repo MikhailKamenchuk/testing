@@ -3,11 +3,11 @@ body{
     font-size: 18px;
 }
 
-section{
+.container{
     margin: 32px;
 }
 
-h1{
+.header{
     word-spacing: 20px;
     text-transform: uppercase;
     text-align: center;
@@ -17,7 +17,7 @@ p{
     line-height: 28px;
 }
 
-.firstWord{
+.technology{
     letter-spacing: 3px;
     font-size: 24px;
     opacity: 80%;
@@ -27,6 +27,6 @@ p{
 a{
     text-decoration: none;
 }
-em{
+.translation{
     color: gray;
 }
