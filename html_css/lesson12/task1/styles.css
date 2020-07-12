@@ -3,11 +3,11 @@ body{
     font-size: 18px;
 }
 
-.container{
+section{
     margin: 32px;
 }
 
-.header{
+h1{
     word-spacing: 20px;
     text-transform: uppercase;
     text-align: center;
