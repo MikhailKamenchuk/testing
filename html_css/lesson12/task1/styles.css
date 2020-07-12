@@ -1,33 +1,32 @@
-body {
-    font-family: "Roboto", sans-serif;
+body{
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-  }
-  
-  .container{
+}
+
+.container{
     margin: 32px;
-  }
-  
-  .header {
+}
+
+.header{
     word-spacing: 20px;
-    text-align: center;
     text-transform: uppercase;
-  }
-  
-  p {
+    text-align: center;
+}
+
+p{
     line-height: 28px;
-  }
-  
-  .technology {
+}
+
+.technology{
     letter-spacing: 3px;
     font-size: 24px;
     opacity: 80%;
     text-decoration: underline;
-  }
-  
-  a {
+}
+
+a{
     text-decoration: none;
-  }
-  
-  .translation {
+}
+.translation{
     color: gray;
-  }
+}
