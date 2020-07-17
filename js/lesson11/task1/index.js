@@ -1,6 +1,6 @@
 const splitText = (str, len = 10) => {
     
-    if(!typeof str) return null;
+    if(typeof str !== "string") return null;
     
     let currentIndex = 0;
     const arr = [];
