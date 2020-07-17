@@ -1,12 +1,12 @@
-const splitString = (str, len = 10) => {
+const splitString = (str, len) => {
     
-    if(!typeof str)return null;
+    if(!typeof str) return null;
     
     let currentIndex = 0;
-    let arr = [];
+    const arr = [];
      
     while(true){
-      let piace = str.substr(currentIndex, len);
+      const piace = str.substr(currentIndex, len);
       
       if(piace.length === 0) break;
       
