@@ -7,12 +7,15 @@ const splitString = (str, len = 10) => {
       let piace = str.substr(currentIndex, len);
       
       if(piace.length === 0) break;
+      
+      console.log(piace.length)
 
-      if(piace.lenght !== len && piace.lenght !== 0) {
-          piace += piace.padEnd(len, '.')
+      if(piace.length < len) {
+        console.log('here');
+        piace = piace.padEnd(len, '.')
       }
       
-      arr.push(piace[0].toUpperCase() + piace.slice(1, piace.length));
+      arr.push(piace);
       currentIndex += len;
       
     }
