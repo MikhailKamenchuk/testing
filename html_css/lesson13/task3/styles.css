@@ -1,15 +1,24 @@
-.list{
-    list-style-type: none;
-    font-size: 1.5em;
-}
+.header-text{
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial;
+    font-weight: 700;
+    font-size:96px;
+    background: -webkit-linear-gradient(45deg, yellow, red);
+    background: -moz-linear-gradient(45deg, yellow, red);
+    background: -o-linear-gradient(45deg, yellow, red);
+    background: -ms-linear-gradient(45deg, yellow, red);
 
-.third{
-    text-decoration: green underline;
-}
-.list li.second{
-    text-decoration: line-through;
-}
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
 
-.list li:first-child{
-    text-decoration: overline  red;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+
 }
