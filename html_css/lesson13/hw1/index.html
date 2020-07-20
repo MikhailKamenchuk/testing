@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&nbsp;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Code rendering&lt;/title&gt;
-    &lt;style&gt;
-        div {
-            font-size: 24px;
+<head>
+    <meta charset="UTF-8">
+    <title>One more gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        div > div {
+            border: 1px dotted grey;
+            margin: 16px;
         }
-    &lt;/style&gt;
-&lt;/head&gt;
-        &nbsp;
-&lt;body&gt;
-    &lt;div&gt;Text&lt;/div&gt;
-&lt;/body&gt;
-        &nbsp;
-&lt;/html&gt;
-    </pre>
-  </body>
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="image" style="background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw1/nature1.jpeg)"></div>
+        <div class="image" style="background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw1/nature2.jpeg)"></div>
+        <div class="image" style="background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw1/nature3.jpeg)"></div>
+    </div>
+</body>
 </html>
