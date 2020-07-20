@@ -4,9 +4,11 @@
     background-image: url(img/nature.jpeg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     font-size: 32px;
     font-weight: 700;
     color: white;
     padding-top: 32px;
+    margin: auto;
 }
