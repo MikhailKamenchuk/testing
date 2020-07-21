@@ -11,36 +11,19 @@ th, td{
     border-collapse: collapse;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid #000
 }
 
-tbody > tr:nth-child(odd) > td:nth-child(even){
+tr:nth-child(odd) > td:nth-child(even){
     background-color: #000;
 }
-tbody > tr:nth-child(even) > td:nth-child(odd){
+tr:nth-child(even) > td:nth-child(odd){
     background-color: #000;
 }
-
-tbody > tr > td:nth-child(1), tbody > tr > td:nth-child(10){
-    background-color: #fff !important
-}
-
-thead > tr > td {
-    border-bottom: 1px solid #000;
-}
-
-tfoot > tr > td{
-    border-top:1px solid #000;
-}
-tr > td:nth-child(1){
-    border-right: 1px solid #000;
-}
-
-tr > td:nth-child(10){
-    border-left: 1px solid #000;
-}
-thead > tr > td:nth-child(1),
-thead > tr > td:nth-child(10),
-tfoot > tr > td:nth-child(1),
-tfoot > tr > td:nth-child(10){
-    border: none
+tr:nth-child(1) > td,
+tr:nth-last-child(1) > td,
+tr > td:nth-child(1),
+tr > td:nth-last-child(1){
+    background-color: #fff !important;
+    border: none;
 }
