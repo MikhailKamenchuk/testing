@@ -28,7 +28,7 @@ thead{
 th, td{
     padding: 4px;
     text-align: right;
-    line-height: 40px;
+    line-height: 32px;
 }
 
 tbody > tr:nth-child(odd){
