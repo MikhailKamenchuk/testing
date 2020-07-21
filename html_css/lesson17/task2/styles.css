@@ -9,9 +9,13 @@ div{
 table{
     width: 500px;
     margin: 16px;
+}
+
+table,
+td,
+th{
     border: 1px solid #000000;
     border-collapse: collapse;
-
 }
 
 caption{
@@ -22,10 +26,9 @@ thead{
 }
 
 th, td{
-    border: 1px solid #000000;
     padding: 4px;
     text-align: right;
-    line-height: 30px;
+    line-height: 40px;
 }
 
 tbody > tr:nth-child(odd){
