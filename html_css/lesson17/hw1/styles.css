@@ -24,11 +24,11 @@ tbody > tr > td:nth-child(1), tbody > tr > td:nth-child(10){
     background-color: #fff !important
 }
 
-thead {
+thead > tr > td {
     border-bottom: 1px solid #000;
 }
 
-tfoot{
+tfoot > tr > td{
     border-top:1px solid #000;
 }
 tr > td:nth-child(1){
@@ -38,6 +38,9 @@ tr > td:nth-child(1){
 tr > td:nth-child(10){
     border-left: 1px solid #000;
 }
-thead > tr > td:nth-child(1){
+thead > tr > td:nth-child(1),
+thead > tr > td:nth-child(10),
+tfoot > tr > td:nth-child(1),
+tfoot > tr > td:nth-child(10){
     border: none
 }
