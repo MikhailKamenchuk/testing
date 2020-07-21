@@ -1,5 +1,6 @@
 table{
     margin: 16px;
+    border-collapse: collapse;
 }
 
 th, td{
@@ -9,4 +10,16 @@ th, td{
     line-height: 50px;
     box-sizing: border-box;
     border-collapse: collapse;
+    padding: 0;
+}
+
+tbody > tr:nth-child(odd) > td:nth-child(odd){
+    background-color: #000;
+}
+tbody > tr:nth-child(even) > td:nth-child(even){
+    background-color: #000;
+}
+
+tbody > tr > td:nth-child(1), tbody > tr > td:nth-child(10){
+    background-color: #fff !important
 }
