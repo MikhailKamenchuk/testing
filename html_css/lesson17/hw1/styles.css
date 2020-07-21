@@ -13,10 +13,10 @@ th, td{
     box-sizing: border-box;
 }
 
-tbody > tr:nth-child(odd) > td:nth-child(odd){
+tbody > tr:nth-child(odd) > td:nth-child(even){
     background-color: #000;
 }
-tbody > tr:nth-child(even) > td:nth-child(even){
+tbody > tr:nth-child(even) > td:nth-child(odd){
     background-color: #000;
 }
 
