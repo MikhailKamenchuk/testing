@@ -15,7 +15,7 @@ button{
 }
 
 button:hover{
-    background-color: darkcyan;
+    color: darkcyan;
 }
 
 button > svg {
