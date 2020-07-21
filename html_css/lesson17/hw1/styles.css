@@ -1,6 +1,7 @@
 table{
     margin: 16px;
     border-collapse: collapse;
+    border: 1px solid #000;
 }
 
 th, td{
@@ -22,4 +23,22 @@ tbody > tr:nth-child(even) > td:nth-child(even){
 
 tbody > tr > td:nth-child(1), tbody > tr > td:nth-child(10){
     background-color: #fff !important
+}
+
+thead {
+    border-bottom: 1px solid #000;
+}
+
+tfoot{
+    border-top:1px solid #000;
+}
+tr > td:nth-child(1){
+    border-right: 1px solid #000;
+}
+
+tr > td:nth-child(10){
+    border-left: 1px solid #000;
+}
+thead > tr > td:nth-child(1){
+    border: none
 }
