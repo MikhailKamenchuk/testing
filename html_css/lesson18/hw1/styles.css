@@ -19,5 +19,5 @@
     font-size: 254px;
 }
 .wrapped{
-    display: inline-flex;
+    display: flex;
 }
