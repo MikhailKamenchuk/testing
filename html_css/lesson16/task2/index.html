@@ -8,9 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
-    
+    <form>
+        <div class="form-control">
+            <label for="lastName">Last Name</label>
+            <input readonly type="text" id="lastName" name="lastName" value="Emerson">
+        </div>
+        <div class="form-control">
+            <label for="">Age</label>
+            <input type="number" name="age" id="age" value="17" required min="3" max="10">
+        </div>
+        <div class="form-control">
+            <input type="checkbox" disabled id="isAgree" name="agree">
+            <label for="isAgree">Accept terms and conditions</label>
+        </div>
+        <div class="form-control choose-gender">
+            <input checked type="radio" name="gender" id="gender-male">
+            <label for="gender-male">Male</label>   
+            <input type="radio" name="gender" id="gender-female">
+            <label for="gender-female">Female</label>   
+            <input type="radio" name="gender" id="gender-secret">
+            <label for="gender-secret">Secret</label>   
+        </div>
+        <div class="form-control">
+            <textarea name="description" maxlength="10" placeholder="Write description..."></textarea>  
+        </div>
+        <div class="form-control">
+            <button type="submit" name="submit">Submit</button>
+        </div>
+    </form>
 </body>
 </html>
