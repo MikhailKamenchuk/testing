@@ -30,6 +30,9 @@ th, td{
     text-align: right;
     line-height: 31px;
 }
+th{
+    line-height: 30px;
+}
 
 tbody > tr:nth-child(odd){
     background-color: #f2f2f2;
