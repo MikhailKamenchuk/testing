@@ -9,7 +9,8 @@ button{
    text-transform: uppercase;
    font-family: 'Courier New', Courier, monospace;
    font-weight: 700;
-   outline: auto;
+   outline: none;
+   border: none;
    cursor: pointer;
 }
 
