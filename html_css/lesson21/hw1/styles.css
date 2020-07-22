@@ -42,7 +42,8 @@ body{
 
 .nav-list-link{
     width: 100%;
-    color: #fff
+    color: #fff;
+    text-decoration: none;
 }
 
 .section{
