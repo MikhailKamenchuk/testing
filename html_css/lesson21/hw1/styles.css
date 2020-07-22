@@ -9,15 +9,16 @@ html{
 body{
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 .header{
     color: #fff;
     text-align: center;
     background-image: linear-gradient(60deg, red, orange);
+    flex: 0 0 auto;
 }
 .main{
     display: flex;
+    flex: 1 0 auto;
 }
 .navigation{
     padding: 0.5em;
@@ -70,12 +71,8 @@ body{
     padding: 0.5em;
     width: 20%;
 }
-/* 
-.nav-list
-.nav-list-item
- */
  .footer{
-     align-self: flex-end;
+     flex: 0 0 auto;
      padding: 0.5em;
      background-color: #e5e5e5;
      width: 100%;
