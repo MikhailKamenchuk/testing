@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 .block{
-    height: 200px;
+    min-height: 200px;
     display: flex;
     flex-grow: 1;
 }
@@ -33,7 +33,7 @@
 }
 
 @media screen and (min-width: 900px){
-    body{
+    .wrapper{
         display: flex;
     }
 }
