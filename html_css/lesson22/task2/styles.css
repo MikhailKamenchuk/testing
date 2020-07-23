@@ -1,23 +1,27 @@
 *{
     box-sizing: border-box;
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
 .navigation{
     background-color: #ff7f50;
     min-height: 200px;
     display: flex;
-    flex-grow: 1;
 }
 .products{
     background-color: #006400;
     min-height: 200px;
     display: flex;
-    flex-grow: 1;
+    
 }
 .news{
     background-color: #0ff;
     min-height: 200px;
     display: flex;
-    flex-grow: 1;
+    width: 100%;
 }
 .text{
     text-transform: lowercase;
@@ -30,15 +34,27 @@
 
 
 @media screen and (min-width: 600px) {
-    .container{
+    .wrapper{
         display: flex;
-        flex-grow: 2;
+    }
+    .navigation, .products{
+        width:50%;
     }
 }
 
 @media screen and (min-width: 900px){
+    .container{
+        flex-direction: row;
+    }
     .wrapper{
         display: flex;
+        flex:2
+    }
+    .navigation, .products{
+        width:50%;
+    }
+    .news{
+        flex: 1;
     }
 }
 
