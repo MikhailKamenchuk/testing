@@ -4,8 +4,6 @@
 .block{
     height: 200px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-grow: 1;
 }
 .navigation{
@@ -18,12 +16,12 @@
     background-color: #0ff;
 }
 .text{
-    display: inline-block;
     text-transform: lowercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 8px;
     background-color: #faebd7;
     border-radius: 4px;
+    margin: auto;
 }
 
 
@@ -34,7 +32,7 @@
     }
 }
 
-@media screen and (min-width: 899px){
+@media screen and (min-width: 900px){
     body{
         display: flex;
     }
