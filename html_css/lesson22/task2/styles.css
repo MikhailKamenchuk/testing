@@ -1,19 +1,23 @@
 *{
     box-sizing: border-box;
 }
-.block{
+.navigation{
+    background-color: #ff7f50;
     min-height: 200px;
     display: flex;
     flex-grow: 1;
 }
-.navigation{
-    background-color: #ff7f50;
-}
 .products{
     background-color: #006400;
+    min-height: 200px;
+    display: flex;
+    flex-grow: 1;
 }
 .news{
     background-color: #0ff;
+    min-height: 200px;
+    display: flex;
+    flex-grow: 1;
 }
 .text{
     text-transform: lowercase;
