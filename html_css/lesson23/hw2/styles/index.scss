@@ -1,0 +1,61 @@
+@import 'layout.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    @include for-large{
+        flex-direction: row;
+    };
+    & .wrapper{
+        @include for-medium{
+            display: flex;
+        };
+        @include for-large{
+            display: flex;
+            flex:2
+        }
+    }
+
+    & .block{
+        min-height: 200px;
+        display: flex;
+    }
+
+    & .navigation{
+        background-color: #ff7f50;
+        @include for-medium {
+            width:50%;
+        };
+        @include for-large {
+            width:50%;
+        };
+    }
+    & .products{
+        background-color: #006400;
+        @include for-medium {
+            width:50%;
+        };
+        @include for-large {
+            width:50%;
+        };
+    }
+    & .news{
+        background-color: #0ff;
+        min-height: 200px;
+        @include for-large{
+            flex: 1;
+        };
+    }
+    & .text{
+        text-transform: lowercase;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 8px;
+        background-color: #faebd7;
+        border-radius: 4px;
+        margin: auto;
+    }
+}

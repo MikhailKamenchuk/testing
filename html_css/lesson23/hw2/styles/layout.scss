@@ -1,0 +1,15 @@
+$mg: 600px;
+$lg: 900px;
+
+
+@mixin for-medium {
+    @media screen and (min-width: 600px){
+        @content
+    }
+};
+@mixin for-large {
+    @media screen and (min-width: 900px){
+        @content
+    }
+};
+
