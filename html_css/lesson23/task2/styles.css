@@ -39,5 +39,10 @@ body {
     background-color: #c47;
   }
 }
+@media screen and (orientation: portrait) {
+  .square {
+    margin: 16px;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
