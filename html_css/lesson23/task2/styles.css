@@ -9,9 +9,12 @@ body {
   height: 100vh;
 }
 
+.container {
+  display: flex;
+}
 @media screen and (orientation: portrait) {
   .container {
-    display: flex;
+    display: block;
   }
 }
 

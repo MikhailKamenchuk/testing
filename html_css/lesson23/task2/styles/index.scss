@@ -12,8 +12,9 @@ body{
 }
 
 .container{
+    display: flex;
     @include direction{
-        display: flex;
+        display: block;
     }
 }
 
