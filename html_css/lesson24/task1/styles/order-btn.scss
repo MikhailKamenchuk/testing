@@ -1,0 +1,27 @@
+.price-card__order-btn{
+    margin-top: 39px;
+    border-radius: 20px;
+    border: 0;
+    outline: none;
+    height: 40px;
+    width: 154px;;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    color: #fff;
+
+    &.green{
+        background-color: #5BB189;
+    }
+
+    &.blue{
+        background-color: #3A6BA5;;
+    }
+
+    &.orange{
+        background-color: #EC632A;;
+    }
+}
