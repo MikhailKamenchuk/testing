@@ -1,9 +1,15 @@
 const createMessanger = () => {
     let message;
     let sender;
-    const sendMessage = name => console.log(`${name}, ${message}! Your ${sender}`);
-    const setMessage = text => message = text;
-    const setSender = text => sender = text;
+    function sendMessage(name){
+      console.log(`${name}, ${message}! Your ${sender}`)
+    };
+    function setMessage (text){
+      message = text;
+    }
+    function setSender(text){
+      sender = text;
+    };
     return {
         sendMessage,
         setMessage,
