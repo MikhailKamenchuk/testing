@@ -1,4 +1,4 @@
-import  getEvenNumbers  from './index';
+import  { getEvenNumbers }  from './index';
 
 it('17 equal 17', () => {
     expect(17).toEqual(17)
