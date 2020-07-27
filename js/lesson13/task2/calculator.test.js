@@ -1,4 +1,4 @@
-import getSum, {getSquaredArray, getOddNumbers} from './calendar';
+import getSum, {getSquaredArray, getOddNumbers} from './calculator';
 
 it('shold get squared numbers', () => {
     const res = getSquaredArray([1,2,3,4]);
