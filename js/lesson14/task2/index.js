@@ -1,6 +1,6 @@
 const createMessanger = () => {
-    let message;
-    let sender;
+    let message = 'Just learn it';
+    let sender = 'Gromcode';
     function sendMessage(name){
       console.log(`${name}, ${message}! Your ${sender}`)
     };
