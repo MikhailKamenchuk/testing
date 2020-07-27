@@ -1,7 +1,7 @@
-import getSum, {getSquaredArrray, getOddNumbers} from './calendar';
+import getSum, {getSquaredArray, getOddNumbers} from './calendar';
 
 it('shold get squared numbers', () => {
-    const res = getSquaredArrray([1,2,3,4]);
+    const res = getSquaredArray([1,2,3,4]);
     expect(res).toEqual([1,4,9,16])
 });
 
