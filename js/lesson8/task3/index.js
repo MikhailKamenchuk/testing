@@ -1,4 +1,4 @@
-const transaction = {
+export const transaction = {
     currency: 'USD',
     value: 170,
     operation: 'sale',
