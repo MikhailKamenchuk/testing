@@ -1,5 +1,5 @@
-export function bind(func, context, ...rest){
+export function bind(func, context){
     return function(){
-        return func.apply(context, rest)
+        return func.apply(context, arguments)
     }
 }
