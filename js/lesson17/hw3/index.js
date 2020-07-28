@@ -13,11 +13,13 @@ function sayName() {
  */
 const sayStudentName = sayName.bind(student);
 
+sayStudentName();
 /*
  * создайте ф-цию sayBruceName которая будет выводить в консоль имя 'Bruce'
  * используйте ф-цию sayName и .bind с нужным объектом
  */
 const sayBruceName = sayName.bind({name: 'Bruce'});
+sayBruceName();
 
 /* ===> 2 <=== */
 const company = {
@@ -35,6 +37,7 @@ function greeting(firstName, lastName) {
  * specialGreeting не должна принимать ни одного аргумента
  */
 const specialGreeting = greeting.bind(company, 'Bob', 'Marley');
+specialGreeting();
 
 
 /* ===> 3 <=== */
@@ -56,6 +59,7 @@ function getPopulation(population) {
  */
 
 const getUkrainePopulation = getPopulation.bind(country, 43000);
+getUkrainePopulation();
 
 /* ===> 4 <=== */
 const transaction = {
@@ -83,3 +87,4 @@ const anotherTransaction = {
  */
 
 const printSpecialTransaction = transaction.printTransaction.bind(anotherTransaction);
+printSpecialTransaction();
