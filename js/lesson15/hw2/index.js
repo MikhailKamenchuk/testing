@@ -25,10 +25,10 @@ export const createLogger = message => {
         return loggers.push(newLog);
     };
     function getRecords(type){
-        if(!type) return loggers;
+        if(!type) return loggers.sort((a, b) => a.dateTime < b.dateTime);
         return loggers
             .filter(el => el.type === type)
-            .sort((a, b) => a.dateTime > b.dateTime)
+            .sort((a, b) => a.dateTime < b.dateTime)
     }
     return{
         warn,
