@@ -29,7 +29,7 @@ function greeting(firstName, lastName) {
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
 // ... your code here
-greeting.apply(company,['Bob', 'Marley'])
+greeting.call(company,'Bob', 'Marley')
 
 /* ===> 3 <=== */
 const country = {
@@ -73,4 +73,4 @@ const anotherTransaction = {
 // '400 USD - buy on NASDAQ'
 // используйте объект anotherTransaction как контекст
 // ... your code here
-transaction.printTransaction.apply(anotherTransaction)
+transaction.printTransaction.call(anotherTransaction)
