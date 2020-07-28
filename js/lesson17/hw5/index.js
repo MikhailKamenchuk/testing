@@ -10,11 +10,10 @@ export const timer = {
                 this.secondsPassed = 0;
        
             }
-        //   console.log(`${this.minsPassed}:${String(this.secondsPassed).padStart(2, '0')}`)
         }, 1000);
     },
     getTime() {
-        return `${this.minsPassed}:${this.secondsPassed}`
+        return `${this.minsPassed}:${String(this.secondsPassed).padStart(2, '0')}`;
     },
     stopTimer(){
         return clearInterval(this.intervalID)
