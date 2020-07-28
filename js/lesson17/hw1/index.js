@@ -15,7 +15,7 @@ sayName.call(student);
 // ... your code here
 
 sayName.call({
-    name: 'Tom',
+    name: 'Bruce',
 });
 
 /* ===> 2 <=== */
