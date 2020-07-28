@@ -1,6 +1,6 @@
 /* ===> 1 <=== */
 const student = {
-    name: 'Bruce',
+    name: 'Tom',
 };
 
 export function sayName() {
@@ -14,7 +14,9 @@ sayName.call(student);
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
 
-
+sayName.call({
+    name: 'Tom',
+});
 
 /* ===> 2 <=== */
 const company = {
