@@ -1,6 +1,6 @@
 /* ===> 1 <=== */
 const student = {
-    name: 'Tom',
+    name: 'Bruce',
 };
 
 export function sayName() {
