@@ -1,5 +1,5 @@
-export const bind = (func, context, ...arg) => {
+export const bind = (func, context, arg1, arg2) => {
     return function(){
-        return func.apply(context, [...arg])
+        return func.call(context, arg1, arg2)
     }
 }
