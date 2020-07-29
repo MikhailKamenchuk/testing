@@ -22,7 +22,8 @@ export class UserRepository {
     constructor(users) {
         this._users = Object.freeze(users);
     }
-    get user() {
+
+    get users() {
         return this._users
     }
 
