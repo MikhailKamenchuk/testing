@@ -18,11 +18,9 @@ export class User {
 
     setAge(newAge) {
         if (newAge < 0) return false;
-        if (newAge >= 25) {
-            this.age = newAge;
-            this.requestNewPhoto();
-        }
-        return this.age
+        this.age = newAge;
+        if (newAge >= 25) this.requestNewPhoto();
+        return newAge
     }
 
 }
