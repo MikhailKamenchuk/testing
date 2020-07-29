@@ -4,7 +4,7 @@ class Vehicle {
         this.numberOfWeels = numberOfWeels;
     }
     move(){
-        console.log(`${this.name} is mooving`)
+        console.log(`${this.name} is moving`)
     }
     stop(){
         console.log(`${this.name} stopped`)
