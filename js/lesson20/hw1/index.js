@@ -1,7 +1,7 @@
 export class Order {
     id = String(Math.random())
     price = 0
-    dateCreated = Date()
+    dateCreated = new Date()
     isConfirmed = false
     dateConfirmed = null
     city = ''
