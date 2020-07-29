@@ -17,8 +17,8 @@ export class User {
         if(newAge >= 25){
             this.age = newAge;
             this.requestNewPhoto();
+            return newAge
         }
-        return newAge
     }
 
     static createEmpty(){
