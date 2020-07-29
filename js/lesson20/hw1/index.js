@@ -18,8 +18,8 @@ export class Order {
     }
 
     confirmOrder(){
-        if(!this.isConfirmed) this.isConfirmed = true;
-        this.dateConfirmed = Date();
+        this.isConfirmed = true;
+        this.dateConfirmed = enw Date();
     }
 
     isValidType(){
