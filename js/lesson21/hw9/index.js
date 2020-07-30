@@ -5,6 +5,10 @@ export const finishForm = () => {
     newElementInput.setAttribute('name', 'login');
 
     const elementParent = document.querySelector('.login-form');
-   
-    return elementParent.append(newElementInput);
+
+    elementParent.append(newElementInput);
+
+    const elementInputPassword = document.querySelector('input[name="password"]');
+    elementInputPassword.setAttribute('type', 'password')
+
 }
