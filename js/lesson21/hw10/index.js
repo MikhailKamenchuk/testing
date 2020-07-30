@@ -7,7 +7,7 @@ export const manageClasses = () => {
     elementItem1.classList.add('selected');
     elementItem2.classList.remove('selected');
     elementItem3.classList.toggle('three_done');
-    if(elementItem4.classList.contain('some-class')){
+    if(elementItem4.classList.contains('some-class')){
         elementItem4.classList.add('another-class');
     }
 }
