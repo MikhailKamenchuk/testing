@@ -1,6 +1,3 @@
-export const createButton = buttonText => {
-    const newButtonElement = document.createElement('button');
-    newButtonElement.textContent = buttonText;
-    const elementParent = document.querySelector('body');
-    return elementParent.append(newButtonElement);
-}
+const elementInput = document.querySelector('.text-input');
+const handlerChange = e => console.log(e.target.value);
+elementInput.addEventListener('change', handlerChange)
