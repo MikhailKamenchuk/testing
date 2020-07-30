@@ -1,5 +1,3 @@
-export const clearList = () => {
-    const elementList = document.querySelector('.categories');
-    elementList.innerHTML = '';
-    return elementList
-}
+const elementListBtns = document.querySelectorAll('.btn');
+const handleClick = event => console.log(event.target.textContent);
+[...elementListBtns].map(btn => btn.addEventListener('click', handleClick));
