@@ -1,5 +1,11 @@
+// 1 создание разметки задачи
+// 2 отрисовка списка дел
+// 3 создать и навесить обработчик на чекбоксы
+// 4 создать функцию создания новой задачи
+// 5 создать и навесить обработчик на кнопку создания новой задачи
+
 let tasks = [
-    { id: Math.random(), text: 'Buy milk', done: true },
+    { id: Math.random(), text: 'Buy milk', done: false },
     { id: Math.random(), text: 'Pick up Tom from airport', done: false },
     { id: Math.random(), text: 'Visit party', done: false },
     { id: Math.random(), text: 'Visit doctor', done: true },
