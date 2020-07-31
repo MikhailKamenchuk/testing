@@ -9,6 +9,7 @@ let tasks = [
 const listElem = document.querySelector('.list');
 
 const renderTasks = () => {
+    console.log(tasks);
     const createListItems = (id, text, isDone) => {
         const checkboxClassName = isDone ? 'list__item_done' : '';
         const isChecked = isDone ? 'checked' : '';
@@ -20,7 +21,7 @@ const renderTasks = () => {
         return newItem;
     };
     const todoListItems = tasks
-        // .sort((a, b) => a.done - b.done)
+        .sort((a, b) => a.done - b.done)
         .map(({ id, text, done }) => createListItems(id, text, done))
         .join('');
     return listElem.innerHTML = todoListItems;
