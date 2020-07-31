@@ -13,7 +13,7 @@ const createListItems = (id, text, isDone) => {
     const isChecked = isDone ? 'checked' : '';
 
     const newItem = `<li class="list__item ${checkboxClassName}" data-id=${id}>
-                        <input class="list__item-checkbox" type="checkbox" data-id=${id} ${isChecked}>
+                        <input class="list__item-checkbox" type="checkbox" ${isChecked}>
                         ${text}
                     </li>`;
     return newItem;
@@ -32,9 +32,10 @@ renderListItems();
 const onStatusTodoChange = event => {
     const isCheckbox = event.target.classList.contains('list__item-checkbox');
     if (!isCheckbox) return;
-    const currentIndex = tasks.findIndex(item => item.id === +event.target.dataset.id)
+    const currentItem = event.target.closest('.list__item');
+    const currentIndex = tasks.findIndex(item => item.id === +currentItem.dataset.id)
     const currentTodo = tasks[currentIndex];
-    currentTodo.done = !currentTodo.done;                    // ....
+    currentTodo.done = !currentTodo.done;                    
     return renderListItems();
 }
 
