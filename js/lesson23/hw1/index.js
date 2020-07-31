@@ -53,7 +53,6 @@ const onAddTodo = () => {
     if (inputTodoCreator.value === '') return;
     createNewTodo(inputTodoCreator.value);
     inputTodoCreator.value = '';
-    return renderTasks();
 }
 
 const createTodoBtn = document.querySelector('.create-task-btn');
