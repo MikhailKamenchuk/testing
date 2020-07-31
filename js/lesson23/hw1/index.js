@@ -20,7 +20,7 @@ const renderTasks = () => {
         return newItem;
     };
     const todoListItems = tasks
-        .sort((a, b) => a.done - b.done)
+        // .sort((a, b) => a.done - b.done)
         .map(({ id, text, done }) => createListItems(id, text, done))
         .join('');
     return listElem.innerHTML = todoListItems;
