@@ -9,19 +9,13 @@ const tasks = [
 const listElem = document.querySelector('.list');
 
 const renderTasks = () => {
-    const createListItems = (id, text, isDone) => {
-        const checkboxClassName = isDone ? 'list__item_done' : '';
-        const isChecked = isDone ? 'checked' : '';
-
-        const newItem = `<li class="list__item ${checkboxClassName}" data-id=${id}>
-                            <input class="list__item-checkbox" type="checkbox" ${isChecked}>
-                            ${text}
-                        </li>`;
-        return newItem;
-    };
     const todoListItems = tasks
         .sort((a, b) => a.done - b.done)
-        .map(({ id, text, done }) => createListItems(id, text, done))
+        .map(({ id, text, done }) => 
+        `<li class="list__item ${done ? 'list__item_done' : ''}" data-id=${id}>
+            <input class="list__item-checkbox" type="checkbox" ${done ? 'checked' : ''}>
+            ${text}
+        </li>`)
         .join('');
     listElem.innerHTML = todoListItems;
 }
