@@ -14,27 +14,20 @@ const renderTasks = () => {
         .map(({ id, text, done }) => {
             const newTaskItem = document.createElement('li');
             newTaskItem.classList.add(`list__item`);
+            newTaskItem.dataset.id = id;
             if (done) {
                 newTaskItem.classList.add('list__item_done');
             }
             
-            newTaskItem.dataset.id = id;
             const newCheckboxItem = document.createElement('input');
             newCheckboxItem.classList.add('list__item-checkbox');
             newCheckboxItem.setAttribute('type', 'checkbox');
-            
-
             newCheckboxItem.checked = done;
             
             newTaskItem.append(newCheckboxItem, text); 
-            return newTaskItem 
-        })
-        
-        // `<li class="list__item ${done ? 'list__item_done' : ''}" data-id=${id}>
-        //     <input class="list__item-checkbox" type="checkbox" ${done ? 'checked' : ''}>
-        //     ${text}
-        // </li>`)
-        // .join('');
+            return newTaskItem;
+        });
+
         listElem.innerHTML = '';
         listElem.append(...todoListItems);
 }
