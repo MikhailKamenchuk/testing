@@ -11,13 +11,32 @@ const listElem = document.querySelector('.list');
 const renderTasks = () => {
     const todoListItems = tasks
         .sort((a, b) => a.done - b.done)
-        .map(({ id, text, done }) => 
-        `<li class="list__item ${done ? 'list__item_done' : ''}" data-id=${id}>
-            <input class="list__item-checkbox" type="checkbox" ${done ? 'checked' : ''}>
-            ${text}
-        </li>`)
-        .join('');
-    listElem.innerHTML = todoListItems;
+        .map(({ id, text, done }) => {
+            const newTaskItem = document.createElement('li');
+            newTaskItem.classList.add(`list__item`);
+            if (done) {
+                newTaskItem.classList.add('list__item_done');
+            }
+            
+            newTaskItem.dataset.id = id;
+            const newCheckboxItem = document.createElement('input');
+            newCheckboxItem.classList.add('list__item-checkbox');
+            newCheckboxItem.setAttribute('type', 'checkbox');
+            
+
+            newCheckboxItem.checked = done;
+            
+            newTaskItem.append(newCheckboxItem, text); 
+            return newTaskItem 
+        })
+        
+        // `<li class="list__item ${done ? 'list__item_done' : ''}" data-id=${id}>
+        //     <input class="list__item-checkbox" type="checkbox" ${done ? 'checked' : ''}>
+        //     ${text}
+        // </li>`)
+        // .join('');
+        listElem.innerHTML = '';
+        listElem.append(...todoListItems);
 }
 renderTasks();
 
