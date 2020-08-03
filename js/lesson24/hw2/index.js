@@ -9,36 +9,36 @@ const tasks = [
         id: Math.random().toString().slice(2), 
         text: 'Buy milk', 
         done: false, 
-        createDate: new Date(2020, 1, 1, 11, 10, 10),
+        createDate: new Date(2020, 1, 1, 11, 10, 10).getTime(),
         finishedDay: null,
     },
     { 
         id: Math.random().toString().slice(2), 
         text: 'Pick up Tom from airport', 
         done: false,
-        createDate: new Date(2020, 1, 2, 11, 10, 10),
+        createDate: new Date(2020, 1, 2, 11, 10, 10).getTime(),
         finishedDay: null,
     },
     { 
         id: Math.random().toString().slice(2), 
         text: 'Visit party', 
         done: false ,
-        createDate: new Date(2020, 1, 3, 11, 10, 10),
+        createDate: new Date(2020, 1, 3, 11, 10, 10).getTime(),
         finishedDay: null,
     },
     { 
         id: Math.random().toString().slice(2), 
         text: 'Visit doctor', 
         done: true,
-        createDate: new Date(2020, 1, 4, 11, 10, 10),
-        finishedDay: new Date(2020, 6, 4, 11, 10, 10),
+        createDate: new Date(2020, 1, 4, 11, 10, 10).getTime(),
+        finishedDay: new Date(2020, 6, 4, 11, 10, 10).getTime(),
     },
     { 
         id: Math.random().toString().slice(2), 
         text: 'Buy meat', 
         done: true,
-        createDate: new Date(2020, 1, 2, 11, 10, 10),
-        finishedDay: new Date(2020, 6, 5, 11, 10, 10),
+        createDate: new Date(2020, 1, 2, 11, 10, 10).getTime(),
+        finishedDay: new Date(2020, 6, 5, 11, 10, 10).getTime(),
      },
 ];
 
@@ -83,7 +83,7 @@ const onStatusTodoChange = event => {
     
     if(!currentTask.done) {
         currentTask.done = true;
-        currentTask.finishedDay = new Date()
+        currentTask.finishedDay = new Date().getTime()
     } else {
         currentTask.done = false;
         currentTask.finishedDay = null;
