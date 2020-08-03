@@ -39,8 +39,9 @@ const onStatusTodoChange = event => {
     if (!isCheckbox) {
         return;
     };
-    
-    const currentTask = tasks.find(item => item.id === event.target.closest('.list__item').dataset.id);
+
+    const currentItem = event.target.closest('.list__item');
+    const currentTask = tasks.find(item => item.id === currentItem.dataset.id);
     currentTask.done = !currentTask.done;
     
     renderTasks();
@@ -48,20 +49,22 @@ const onStatusTodoChange = event => {
 
 listElem.addEventListener('click', onStatusTodoChange);
 
-const inputTodoCreator = document.querySelector('.task-input');
-const createTodoBtn = document.querySelector('.create-task-btn');
-
 const onCreateTask = () => {
+    const inputTodoCreator = document.querySelector('.task-input');
+    
     if (inputTodoCreator.value === '') {
         return;
     };
-    tasks.push({
+
+    const newTask = {
         id: Math.random().toString().slice(2),
         text: inputTodoCreator.value,
         done: false
-    });
+    };
+    tasks.push(newTask);
     inputTodoCreator.value = '';
     renderTasks();
 }
 
+const createTodoBtn = document.querySelector('.create-task-btn');
 createTodoBtn.addEventListener('click', onCreateTask);
