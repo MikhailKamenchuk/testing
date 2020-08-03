@@ -46,9 +46,16 @@ const listElem = document.querySelector('.list');
 
 const renderTasks = () => {
     const todoListItems = tasks
-    .sort((a, b) => b.createDate - a.createDate)
-    .sort((a, b) => b.finishedDay - a.finishedDay)
-    .sort((a, b) => a.done - b.done)
+        .sort((a, b) => {
+            if (a.done - b.done !== 0) {
+                return a.done - b.done;
+            } 
+            if(a.done === true) {
+                return b.finishedDay - a.finishedDay;
+            };
+            
+            return b.createDate - a.createDate;
+        })
         .map(({ id, text, done }) => {
             const newTaskItem = document.createElement('li');
             newTaskItem.classList.add(`list__item`);
@@ -68,7 +75,6 @@ const renderTasks = () => {
 
         listElem.innerHTML = '';
         listElem.append(...todoListItems);
-        console.log(tasks)
 }
 renderTasks();
 
