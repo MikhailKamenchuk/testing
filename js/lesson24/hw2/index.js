@@ -25,14 +25,14 @@ const tasks = [
         text: 'Visit doctor', 
         done: true,
         createDate: new Date(2020, 1, 4, 11, 10, 10),
-        finishedDay: new Date(2020, 7, 4, 11, 10, 10),
+        finishedDay: new Date(2020, 6, 4, 11, 10, 10),
     },
     { 
         id: Math.random().toString().slice(2), 
         text: 'Buy meat', 
         done: true,
         createDate: new Date(2020, 1, 2, 11, 10, 10),
-        finishedDay: new Date(2020, 7, 5, 11, 10, 10),
+        finishedDay: new Date(2020, 6, 5, 11, 10, 10),
      },
 ];
 
@@ -41,8 +41,8 @@ const listElem = document.querySelector('.list');
 const renderTasks = () => {
     const todoListItems = tasks
     .sort((a, b) => b.createDate - a.createDate)
+    .sort((a, b) => b.finishedDay - a.finishedDay)
     .sort((a, b) => a.done - b.done)
-    .sort((a, b) => a.finishedDay - b.finishedDay)
         .map(({ id, text, done }) => {
             const newTaskItem = document.createElement('li');
             newTaskItem.classList.add(`list__item`);
