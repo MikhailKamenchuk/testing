@@ -79,10 +79,16 @@ const onStatusTodoChange = event => {
         return;
     };
 
-    const currentItem = event.target.closest('.list__item');
-    const currentTask = tasks.find(item => item.id === currentItem.dataset.id);
-    currentTask.done = !currentTask.done;
-    !currentTask.finishedDay ? currentTask.finishedDay = new Date() : currentTask.finishedDay = null;    
+    const currentTask = tasks.find(item => item.id === event.target.closest('.list__item').dataset.id);
+    
+    if(!currentTask.done) {
+        currentTask.done = true;
+        currentTask.finishedDay = new Date()
+    } else {
+        currentTask.done = false;
+        currentTask.finishedDay = null;
+    };
+    
     renderTasks();
 };
 
