@@ -9,22 +9,18 @@
 // input: two date objects
 // output: string
 
-const msInDay = 1000*60*60*24;
-const msInHour = 1000*60*60;
-const msInMin = 1000*60;
 const msInSec = 1000;
+const msInMin = msInSec * 60;
+const msInHour = msInMin * 60;
+const msInDay = msInHour * 24;
 
 export const getDiff = (startDate, endDate) => {
     const diff = Math.abs(startDate.getTime() - endDate.getTime());
+
     const diffDays = Math.floor(diff / msInDay);
-
-    const restMsAfterGetDays = diff - diffDays * msInDay;
-    const diffHours = Math.floor(restMsAfterGetDays / msInHour);
-
-    const restMsAfterGetHours = restMsAfterGetDays - diffHours * msInHour;
-    const diffMins = Math.floor(restMsAfterGetHours / msInMin);
+    const diffHours = Math.floor((diff % msInDay) / msInHour);
+    const diffMins = Math.floor((diff % msInHour) / msInMin);
+    const difSec = Math.floor((diff % msInMin) / msInSec);
     
-    const restMsAfterGetMins = restMsAfterGetHours - diffMins * msInMin;
-    const difSec = Math.floor(restMsAfterGetMins / msInSec);
     return `${diffDays}d ${diffHours}h ${diffMins}m ${difSec}s`;
 }
