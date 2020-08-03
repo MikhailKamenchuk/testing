@@ -1,3 +1,9 @@
+// algo:
+// 1. add values in tasks about date created task and date finished task;
+// 2. refactor render function: add sort array with new data;
+// 3. refactor createTask function. All new task must have two new fields;
+// 4. refactor handle change function for change finishedDate field in the current task
+
 const tasks = [
     { 
         id: Math.random().toString().slice(2), 
