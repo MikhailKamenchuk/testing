@@ -76,9 +76,7 @@ const onStatusTodoChange = event => {
     const currentItem = event.target.closest('.list__item');
     const currentTask = tasks.find(item => item.id === currentItem.dataset.id);
     currentTask.done = !currentTask.done;
-    !currentTask.finishedDay ? currentTask.finishedDay = new Date() : currentTask.finishedDay = null;
-    !currentTask.createDate ? currentTask.createDate = new Date() : currentTask.createDate = null;
-    
+    !currentTask.finishedDay ? currentTask.finishedDay = new Date() : currentTask.finishedDay = null;    
     renderTasks();
 };
 
