@@ -25,24 +25,18 @@ const stud = [
 ];
 
 export const studentsBirthDays = students => {
-    let obj = {};
-    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    students.map(student => {
-        if(!obj[months[new Date(student.birthDate).getMonth()]]) {
-            const newProperty = obj[months[new Date(student.birthDate).getMonth()]] = [];
-            newProperty.push(student);
-            return
-        }
+    return students
+        .sort((a, b) => new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate())
+        .reduce((acc, next) => {
+            const arr = [];
+            const stringifyDate = new Date(next.birthDate).toString().split(' ')[1];
+            students.map(student => {
+                if(stringifyDate === new Date(student.birthDate).toString().split(' ')[1]){
+                  arr.push(student.name);
+                };
+            });
+            acc[stringifyDate] = arr;
+            return acc;
+        }, {});
 
-        obj[months[new Date(student.birthDate).getMonth()]].push(student);
-    });               
-    Object.values(obj).forEach(value => value
-        .sort((a, b) => new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate()));
-        
-    const newValues = Object.values(obj).map(item => item.map(el => el.name))
-    
-   return Object.entries(obj)
-            .map((el, index) => [el[0], el[1] = newValues[index]])
-            .reduce((acc, [key, value]) => (acc[key] = value, acc), {});
-}
-
+};
