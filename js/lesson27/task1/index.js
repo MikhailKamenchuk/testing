@@ -12,9 +12,9 @@ const getLocalStorageData = () => {
             [key]: newValue
            }
         }, {})
-}
+};
 
 export{
     getLocalStorageData
-}
+};
    

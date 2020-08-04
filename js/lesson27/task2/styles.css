@@ -1,0 +1,27 @@
+.page{
+    display: flex;
+    height: 100vh;
+    width: 100wh;
+    font-size: 32px;
+}
+.counter{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.counter__btn{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    background: transparent;
+}
+
+.counter__value{
+    margin: 16px;
+}
