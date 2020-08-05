@@ -11,7 +11,7 @@ const formatter = (d, value, amount) => {
         case 'years':
             return d.setFullYear(d.getFullYear() + amount);
         case 'months':
-            return d.setMonth(d.getMonths() + amount);
+            return d.setMonth(d.getMonth() + amount);
         case 'days':
             return d.setDate(d.getDate() + amount);
         case 'hours':
