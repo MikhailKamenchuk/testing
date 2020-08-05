@@ -6,6 +6,10 @@
 
 // input: object
 // output: object
+// const withOperator = operator => {
+
+// }
+
 const formatter = (d, value, amount) => {
     switch (value) {
         case 'years':
@@ -31,11 +35,11 @@ export const shmoment = date => {
     let result = date;
     return {
         add(value, amount) {
-            result = new Date (formatter(result, value, amount));
+            result = new Date(formatter(result, value, amount));
             return this
         },
         subtract(value, amount) {
-            result = formatter(result, value, -amount);
+            result = new Date(formatter(result, value, -amount));
             return this;
         },
         result() {
