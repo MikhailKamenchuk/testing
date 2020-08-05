@@ -24,14 +24,14 @@ const stud = [
     }
 ];
 
-export const studentsBirthDays = students => {
+ export const studentsBirthDays = students => {
     return students
         .sort((a, b) => new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate())
         .reduce((acc, next) => {
             const arr = [];
-            const stringifyDate = new Date(next.birthDate).toString().split(' ')[1];
+            const stringifyDate = new Date(next.birthDate).toLocaleString('en', { month: 'short' });
             students.map(student => {
-                if(stringifyDate === new Date(student.birthDate).toString().split(' ')[1]){
+                if(stringifyDate === new Date(student.birthDate).toLocaleString('en', { month: 'short' })){
                   arr.push(student.name);
                 };
             });
