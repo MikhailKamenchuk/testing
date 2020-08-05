@@ -9,7 +9,7 @@ export const calc = value => {
             res -= num;
             return this
         },
-        mul(num){
+        mult(num){
             res *= num;
             return this
         },
