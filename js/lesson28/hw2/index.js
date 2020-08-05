@@ -2,20 +2,17 @@
 // output number
 
 // algo:
-// 1.create fibonacci function
-// 2.
+// 1.create fibonacci cicle
+// 2.stop cicle when value will be bigest than inpute value
 
-// const maxFibonacci = num => {
-    // const fib = n => {
-    //     let prev = 0, next = 1;
-    //     for(let i = 0; i < n; i++){
-    //       let temp = next;
-    //       next = prev + next;
-    //       prev = temp;
-    //     }
-    //     return prev;
-    //   }
-    //   console.log(fib(1))
-    
-// }
-// console.log(maxFibonacci(6))
+export const maxFibonacci = n => {
+    let prev = 0;
+    let next = 1;
+    for (let i = 0; ; i++) {
+        if (next > n) break
+        const temporary = next;
+        next = prev + next;
+        prev = temporary;
+    }
+    return prev;
+}
