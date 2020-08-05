@@ -25,13 +25,14 @@ const stud = [
 ];
 
  export const studentsBirthDays = students => {
+    const formatter = new Intl.DateTimeFormat('en', { month: 'short' });
     return students
         .sort((a, b) => new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate())
         .reduce((acc, next) => {
             const arr = [];
-            const stringifyDate = new Date(next.birthDate).toLocaleString('en', { month: 'short' });
+            const stringifyDate = formatter.format(new Date(next.birthDate));
             students.map(student => {
-                if(stringifyDate === new Date(student.birthDate).toLocaleString('en', { month: 'short' })){
+                if(stringifyDate === formatter.format(new Date(student.birthDate))){
                   arr.push(student.name);
                 };
             });
