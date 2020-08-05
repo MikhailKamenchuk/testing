@@ -7,39 +7,30 @@
 // input: object
 // output: object
 
-const formatter = (date, value, amount) => {
-    switch (value) {
-        case 'years':
-            console.log('Consolling DATE: ' + date)
-            return date.setFullYear(date.getFullYear() + amount);
-        case 'months':
-            console.log('Consolling DATE: ' + date)
-            return date.setMonth(date.getDate() + amount);
-        case 'days':
-            console.log('Consolling DATE: ' + date)
-            return date.setDate(date.getDate() + amount);
-        case 'hours':
-            console.log('Consolling DATE: ' + date)
-            return date.setHours(date.getHours() + amount);
-        case 'minutes':
-            console.log('Consolling DATE: ' + date)
-            return date.setMinutes(date.getMinutes() + amount);
-        case 'seconds':
-            console.log('Consolling DATE: ' + date)
-            return date.setSeconds(date.getSeconds() + amount);
-        case 'milliseconds':
-            console.log('Consolling DATE: ' + date)
-            return date.setMilliseconds(date.getMilliseconds() + amount);
-        default:
-            break;
-    }
-}
-
 export const shmoment = date => {
+    const formatter = (d, value, amount) => {
+        switch (value) {
+            case 'years':
+                return d.setFullYear(d.getFullYear() + amount);
+            case 'months':
+                return d.setMonth(d.getDate() + amount);
+            case 'days':
+                return d.setDate(d.getDate() + amount);
+            case 'hours':
+                return d.setHours(d.getHours() + amount);
+            case 'minutes':
+                return d.setMinutes(d.getMinutes() + amount);
+            case 'seconds':
+                return d.setSeconds(d.getSeconds() + amount);
+            case 'milliseconds':
+                return d.setMilliseconds(d.getMilliseconds() + amount);
+            default:
+                break;
+        }
+    }
     let result = date;
     return {
         add(value, amount) {
-            // console.log('Formatter: ' + formatter(result, value, amount))
             result = new Date (formatter(result, value, amount));
             return this
         },
