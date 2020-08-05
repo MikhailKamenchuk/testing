@@ -6,28 +6,28 @@
 
 // input: object
 // output: object
+const formatter = (d, value, amount) => {
+    switch (value) {
+        case 'years':
+            return d.setFullYear(d.getFullYear() + amount);
+        case 'months':
+            return d.setMonth(d.getMonths() + amount);
+        case 'days':
+            return d.setDate(d.getDate() + amount);
+        case 'hours':
+            return d.setHours(d.getHours() + amount);
+        case 'minutes':
+            return d.setMinutes(d.getMinutes() + amount);
+        case 'seconds':
+            return d.setSeconds(d.getSeconds() + amount);
+        case 'milliseconds':
+            return d.setMilliseconds(d.getMilliseconds() + amount);
+        default:
+            break;
+    }
+}
 
 export const shmoment = date => {
-    const formatter = (d, value, amount) => {
-        switch (value) {
-            case 'years':
-                return d.setFullYear(d.getFullYear() + amount);
-            case 'months':
-                return d.setMonth(d.getDate() + amount);
-            case 'days':
-                return d.setDate(d.getDate() + amount);
-            case 'hours':
-                return d.setHours(d.getHours() + amount);
-            case 'minutes':
-                return d.setMinutes(d.getMinutes() + amount);
-            case 'seconds':
-                return d.setSeconds(d.getSeconds() + amount);
-            case 'milliseconds':
-                return d.setMilliseconds(d.getMilliseconds() + amount);
-            default:
-                break;
-        }
-    }
     let result = date;
     return {
         add(value, amount) {
