@@ -1,4 +1,4 @@
-const addImage = (imgSrc, callback) => {
+export const addImage = (imgSrc, callback) => {
     // TODO write your code here
     
     const imgElem = document.createElement('img');
@@ -8,8 +8,6 @@ const addImage = (imgSrc, callback) => {
     const containerElem = document.querySelector('.page');
     containerElem.append(imgElem);
     
-    
-    
     const onImageLoaded = () => {
         callback(null, imgElem)
     }
@@ -17,6 +15,7 @@ const addImage = (imgSrc, callback) => {
     imgElem.addEventListener('load',  onImageLoaded);
     imgElem.addEventListener('error', () => callback('Image load is failed...'));
 }
+
 // addImage()
 // callack example
 const onImageLoaded = (error, imgElem) => {
