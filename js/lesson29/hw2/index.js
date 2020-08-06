@@ -12,9 +12,8 @@ export function requestUserData(userId, callback){
         email: `${userId}@example.com`,
     }
     const randomDelay = Math.floor((Math.random() * 3) + 1) * 1000;
-    console.log(user)
-    console.log(randomDelay)
-    if(userId === 'broken'){
+    
+    if( userId === 'broken' ){
         setTimeout(() => callback(null, 'Failed to load user data'), randomDelay);
     }else{
         setTimeout(() => callback(user, null), randomDelay);
