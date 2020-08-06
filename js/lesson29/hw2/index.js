@@ -16,7 +16,7 @@ export function requestUserData(userId, callback){
     if( userId === 'broken' ){
         setTimeout(() => callback(null, 'Failed to load user data'), randomDelay);
     }else{
-        setTimeout(() => callback(user, null), randomDelay);
+        setTimeout(() => callback(user), randomDelay);
     }
 }
 
