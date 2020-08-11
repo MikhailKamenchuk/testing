@@ -17,7 +17,7 @@ const successPromise = new Promise(resolve => {
 
 successPromise.then(function onSuccess(number) {
     /* ...code here */
-    console.log(number*2)
+    console.log(number*number)
 });
 
 /*
