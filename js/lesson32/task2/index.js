@@ -1,13 +1,13 @@
-export const getUserASAP = userId => new Promise(resolve => {
+export const getUserASAP = userId => {
     const randomDelay = (from, to) => from + Math.random() * (to - from); 
     const servers = [
         'https://server.com/us/', 
         'https://server.com/eu/', 
         'https://server.com/au/'
     ];
-    const request = userUrl => new Promise(res => {
+    const request = userUrl => new Promise(resolve => {
         setTimeout(() => {
-            res({
+            resolve({
                 userData: {
                     name: 'Tom',
                     age: 18
@@ -18,5 +18,7 @@ export const getUserASAP = userId => new Promise(resolve => {
     })
     const usersUrl = servers.map(server => `${server}${userId}`);
     const result = usersUrl.map(urlForRequest => request(urlForRequest));
-    resolve(Promise.race(result));    
-});
+    return Promise.race(result);    
+};
+
+// getUserASAP('id-1').then(res => console.log(res))
