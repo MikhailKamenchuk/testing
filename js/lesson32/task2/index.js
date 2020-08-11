@@ -10,7 +10,7 @@ export const getUserASAP = userId => {
             resolve({
                 userData: {
                     name: 'Tom',
-                    age: 18
+                    age: 17
                 },
                 source: userUrl
             })
