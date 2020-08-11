@@ -34,5 +34,5 @@ const userDataPromise = new Promise(resolve => {
     .then(function onSuccess(userData) {
       /* ...code here */
       const { name, age } = userData;
-      console.log(`My ${name} is Tom. I am ${age} years old`)
+      console.log(`My name is ${name}. I am ${age} years old`)
     });
