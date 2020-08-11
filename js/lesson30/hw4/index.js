@@ -1,4 +1,4 @@
-export const addImage = (url, callback) => {
+const addImage = (url, callback) => {
     const img = document.createElement('img');
     img.setAttribute('alt', 'User avatar');
     img.src = url;
