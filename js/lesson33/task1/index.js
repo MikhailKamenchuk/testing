@@ -13,7 +13,9 @@ const onFetchData = () => {
         .then(data => {
             const { avatar_url, name, location } = data;
             userAvatarElem.src = avatar_url;
-            userLocationElem.textContent = location;
+            userLocationElem.textContent = location
+                ? `from ${location}`
+                : '';
             userNameElem.textContent = name;
         });
 };
