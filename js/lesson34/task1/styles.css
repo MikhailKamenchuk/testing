@@ -45,11 +45,9 @@ body {
     opacity: 0.7;
 }
 
-.list__item_done .list__item__text{
+.list__item_done .list__item__text {
     text-decoration: line-through;
-
 }
-
 
 .list__item:last-child {
     margin-bottom: 0;
@@ -58,8 +56,8 @@ body {
 .list__item-checkbox {
     margin-right: 8px;
 }
-.list__item__delete-btn{
-    width:24px;
+.list__item__delete-btn {
+    width: 24px;
     height: 24px;
     background: transparent;
     border: none;
@@ -70,8 +68,8 @@ body {
     margin-left: auto;
 }
 
-.list__item__delete-btn:after{
-    content:'+'
+.list__item__delete-btn:after {
+    content: "+";
 }
 
 .btn {
