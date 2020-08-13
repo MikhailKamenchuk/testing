@@ -46,6 +46,3 @@ export const onDeleteTodo = event => {
 
 }
 
-const listElem = document.querySelector('.list');
-listElem.addEventListener('click', onStatusTodoChange);
-listElem.addEventListener('click', onDeleteTodo);

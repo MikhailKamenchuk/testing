@@ -1,8 +1,14 @@
-import { setItem, getItem } from './storage.js';
 import { renderTasks } from './renderTasks.js';
-import { onStatusTodoChange } from './changeTask.js';
-import { onCreateTask } from './createTask.js';
+import { onCreateTask, } from './createTask.js';
+import { onDeleteTodo, onStatusTodoChange } from './changeTask.js';
+
+const listElem = document.querySelector('.list');
+const createTodoBtn = document.querySelector('.create-task-btn');
+
 
 document.addEventListener('DOMContentLoaded', () => {
     renderTasks()
 });
+createTodoBtn.addEventListener('click', onCreateTask);
+listElem.addEventListener('click', onStatusTodoChange);
+listElem.addEventListener('click', onDeleteTodo);

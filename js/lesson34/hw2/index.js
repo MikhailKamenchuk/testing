@@ -23,7 +23,7 @@ loginFormElem.addEventListener('input', onFormFieldsChange);
 const onSendLoginData = e => {
     e.preventDefault();
     const formData = Object.fromEntries(new FormData(e.target).entries());
-    console.log(formData);
+    
     fetchRequest(formData)
         .then(res => res.json())
         .then(data => {

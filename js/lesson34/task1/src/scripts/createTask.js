@@ -1,5 +1,5 @@
 import { renderTasks } from './renderTasks.js';
-import { createTask } from './tasksGateway.js'
+import { createTask } from './tasksGateway.js';
 
 export const onCreateTask = () => {
     const inputTodoCreator = document.querySelector('.task-input');
@@ -15,10 +15,8 @@ export const onCreateTask = () => {
     }
     createTask(newTask)
         .then(() => {
-            renderTasks()
+            renderTasks();
         });
     inputTodoCreator.value = '';
 }
 
-const createTodoBtn = document.querySelector('.create-task-btn');
-createTodoBtn.addEventListener('click', onCreateTask);
