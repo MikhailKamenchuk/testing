@@ -26,7 +26,11 @@ const onSendLoginData = e => {
     console.log(formData);
     fetchRequest(formData)
         .then(res => res.json())
-        .then(data => alert(JSON.stringify(data)))
+        .then(data => {
+            e.target.reset();
+            alert(JSON.stringify(data));
+            
+        })
         .catch(() => {
             errorTextElem.textContent = 'Failed to create user' 
         })
