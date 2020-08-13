@@ -1,8 +1,10 @@
-const getAllDevs = (userId, repoId) => fetch(`https://api.github.com/repos/${userId}/${repoId}/commits?per_page=100`)
-        .then(res => res.json());
+
 
 export const getMostActiveDevs = ({ days, userId, repoId }) => {
-    return getAllDevs(userId, repoId).then(data => data
+    const getAllDevs = () => fetch(`https://api.github.com/repos/${userId}/${repoId}/commits?per_page=100`)
+        .then(res => res.json());
+
+    return getAllDevs().then(data => data
         .map(item => {
             const { commit: { author: { name, email, date } } } = item;
             return { name, email, date }
