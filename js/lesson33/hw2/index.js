@@ -1,7 +1,7 @@
 const getAllDevs = (userId, repoId) => fetch(`https://api.github.com/repos/${userId}/${repoId}/commits?per_page=100`)
         .then(res => res.json());
 
-const getMostActiveDevs = ({ days, userId, repoId }) => {
+export const getMostActiveDevs = ({ days, userId, repoId }) => {
     return getAllDevs(userId, repoId).then(data => data
         .map(item => {
             const { commit: { author: { name, email, date } } } = item;
@@ -29,4 +29,4 @@ const getMostActiveDevs = ({ days, userId, repoId }) => {
 }
     
 
-getMostActiveDevs({ days: 7, userId: 'MikhailKamenchuk', repoId: 'live-session' }).then(res => console.log(res))
+// getMostActiveDevs({ days: 7, userId: 'MikhailKamenchuk', repoId: 'live-session' }).then(res => console.log(res))
