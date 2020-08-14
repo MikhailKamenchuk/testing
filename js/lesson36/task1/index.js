@@ -6,7 +6,7 @@ export const fetchUser = async userId => {
         }
         return null
     } catch (error) {
-        return
+        throw new Error('Failed to fetch user')
     }
 }
 
