@@ -19,6 +19,7 @@
   "homepage": "https://github.com/MikhailKamenchuk/testing#readme",
   "dependencies": {
     "babel-eslint": "^10.1.0",
+    "core-js": "^3.6.5",
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
